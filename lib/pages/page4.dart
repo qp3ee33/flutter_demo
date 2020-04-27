@@ -10,7 +10,7 @@ class Page4 extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text("PageFour"),
+        title: Text("通过页面构造参数传参"),
       ),
       body: Center(
         child: Text(text),

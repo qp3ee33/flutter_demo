@@ -12,13 +12,9 @@ class Page404 extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          // 销毁所有之前的页面并跳转新页面
-          // Navigator.of(context).pushNamedAndRemoveUntil('/page1',(route) => false);
-          // 销毁本页并跳转
-          // Navigator.of(context).popAndPushNamed('/page1');
           Navigator.of(context).popAndPushNamed('/');
         },
-        child: Text('anyPage'),
+        child: Text('home'),
       ),
     );
   }

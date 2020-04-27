@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Page5 extends StatelessWidget {
+class RouteParamBackPropagationDemoPage extends StatelessWidget {
 
  @override
   Widget build(BuildContext context) {
@@ -26,19 +26,17 @@ class RaisedButtonPage extends StatelessWidget {
         onPressed: () {
             _navigateAndDisplaySelection(context);
           },
-          child: Text('选择吧！'),
+          child: Text('开始跳转'),
         ),
     );
   }
   _navigateAndDisplaySelection(BuildContext context) async {
-    // Navigator.push returns a Future that completes after calling
-    // Navigator.pop on the Selection Screen.
+    // 异步调用等待下一个页面的参数回传
     final result = await Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => SelectionScreen()),
     );
-    // After the Selection Screen returns a result, hide any previous snackbars
-    // and show the new result.
+    // 用回传参数构建snack bar.
     Scaffold.of(context)
       ..removeCurrentSnackBar()
       ..showSnackBar(SnackBar(content: Text("$result")));
@@ -59,20 +57,18 @@ class SelectionScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
-                  // Close the screen and return "Yep!" as the result.
-                  Navigator.pop(context, '我很帅!');
+                  Navigator.pop(context, '我很帅');
                 },
-                child: Text('我很帅!'),
+                child: Text('返回我很帅!'),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
-                  // Close the screen and return "Nope!" as the result.
                   Navigator.pop(context, '我很聪明!');
                 },
-                child: Text('我很聪明!'),
+                child: Text('返回我很聪明!'),
               ),
             )
           ],

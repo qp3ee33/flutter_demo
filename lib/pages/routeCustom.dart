@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Page6 extends StatelessWidget {
+class RouteCustomDemoPage extends StatelessWidget {
 
  @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class NextPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.amber,
-      child: Center(child: Text("下一页")),
+      child: Center(child: Text("这是下一页")),
     );
   }
 }

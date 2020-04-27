@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:route_demo/model/textModel.dart';
 
+import 'RouteParamBackPropagation.dart';
+import 'page1.dart';
 import 'page4.dart';
-import 'page5.dart';
-import 'page6.dart';
+import 'routeCustom.dart';
 import 'routeDestroy.dart';
 
 class RoutePage extends StatelessWidget {
@@ -48,7 +49,7 @@ class RoutePage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return Page4();
+                      return PageOne();
                     },
                   )
                 );
@@ -81,7 +82,7 @@ class RoutePage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return Page5();
+                      return RouteParamBackPropagationDemoPage();
                     },
                   )
                 );
@@ -116,7 +117,7 @@ class RoutePage extends StatelessWidget {
                           child: child,
                         )
                       ),
-                    pageBuilder: (context,_,__) => Page6(),
+                    pageBuilder: (context,_,__) => RouteCustomDemoPage(),
                   )
                 );
               }

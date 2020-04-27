@@ -17,7 +17,7 @@ class PageTwo extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
        onPressed: (){
-          Navigator.of(context).pushNamed('/page3');
+          Navigator.of(context).pushNamed('/page4',arguments: 'page2传来的参数');
         },
         child: Text('无参'),
       ),
