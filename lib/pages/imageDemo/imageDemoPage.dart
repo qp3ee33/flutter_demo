@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class ImageDemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('home'),
+        title: new Text('image插件'),
       ),
       body: new Center(
-        child: new Text('欢迎来到由qp提供的flutter Demo世界'),
+        child: new Text('image插件介绍'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -23,35 +23,29 @@ class HomePage extends StatelessWidget {
                   width: 100.0,
                   height: 100.0,
                   child: CircleAvatar(
-                    child: Text('Route'),
+                    child: Text('Image'),
                   ),
                 ),
               ),
             ),
             ListTile(
                 leading: Icon(Icons.settings),
-                title: Text('路由'),
+                title: Text('显示图片'),
                 onTap: () {
-                  Navigator.of(context).pushNamed('/route');
+                  Navigator.of(context).pushNamed('/imageDemo/showImage');
                 }),
             ListTile(
                 leading: Icon(Icons.settings),
-                title: Text('表单'),
+                title: Text('图片处理'),
                 onTap: () {
                   Navigator.of(context).pushNamed('/page2');
                 }),
             ListTile(
                 leading: Icon(Icons.settings),
-                title: Text('toast插件'),
+                title: Text('输出图片'),
                 onTap: () {
                   Navigator.of(context).pushNamed('/toastDemo');
-            }),
-            ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('swiper插件'),
-                onTap: () {
-                  Navigator.of(context).pushNamed('/swiper');
-            }),
+                }),
           ],
         ),
       ),
