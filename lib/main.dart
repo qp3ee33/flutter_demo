@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:route_demo/inherited/loginInherited.dart';
 import 'package:route_demo/model/loginInfoModel.dart';
 import 'package:route_demo/pages/homePage.dart';
-import 'package:route_demo/pages/page404.dart';
+import 'package:route_demo/pages/routerDemo/page404.dart';
 import 'package:route_demo/router/routeTable.dart';
 void main() => runApp(MyApp3());
 

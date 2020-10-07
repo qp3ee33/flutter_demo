@@ -52,6 +52,12 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pushNamed('/swiper');
             }),
+            ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('datetimePicker插件'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/datetimePicker');
+            }),
           ],
         ),
       ),

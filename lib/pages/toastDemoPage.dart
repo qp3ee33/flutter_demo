@@ -28,6 +28,7 @@ class _ToastDemoPageState extends State<ToastDemoPage> {
       ),
     );
     _showToast() {
+      fToast.init(context);
       fToast.showToast(
         child: toast,
         gravity: ToastGravity.BOTTOM,
