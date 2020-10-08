@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:route_demo/pages/formPage.dart';
 import 'package:route_demo/pages/homePage.dart';
+import 'package:route_demo/pages/pullRefreshDemo.dart';
 // import 'package:route_demo/pages/imageDemo/imageDemoPage.dart';
 // import 'package:route_demo/pages/imageDemo/showImagePage.dart';
 import 'package:route_demo/pages/routerDemo/page1.dart';
@@ -15,7 +16,7 @@ import 'package:route_demo/pages/swiper/swiperDemo.dart';
 import 'package:route_demo/pages/swiper/swiperEventPage.dart';
 import 'package:route_demo/pages/swiper/swiperLayoutPage.dart';
 import 'package:route_demo/pages/swiper/swiperPage.dart';
-import 'package:route_demo/pages/timePicker.dart';
+import 'package:route_demo/pages/datetimePicker/timePicker.dart';
 import 'package:route_demo/pages/toastDemoPage.dart';
 
 Map<String, WidgetBuilder> mainRoutes(context) {
@@ -36,6 +37,7 @@ Map<String, WidgetBuilder> mainRoutes(context) {
     "/swiper/3": (context) => PageCustomSwiper(),
     "/swiper/4": (context) => PageEventSwiper(),
     "/datetimePicker": (context) => TimePickerDemo(),
+    "/pullRefresh": (context) => PullRefreshDemo(),
     // "/imageDemo":(context) => ImageDemoPage(),
     //  "/imageDemo/showImage":(context) => ShowImagePage()
   };

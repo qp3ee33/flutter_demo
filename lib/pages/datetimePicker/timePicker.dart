@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:route_demo/pages/datetimePicker/customDatetimePicker.dart';
 
 class TimePickerDemo extends StatelessWidget {
   const TimePickerDemo({Key key}) : super(key: key);
@@ -174,11 +175,11 @@ class TimePickerDemo extends StatelessWidget {
               ),
               RaisedButton(
                 child: Text(
-                  '显示日语日期时间选择',
+                  '显示自定义日语日期时间选择',
                   style: TextStyle(color: Colors.blue),
                 ),
                 onPressed: (){
-                  DatePicker.showDateTimePicker(context,
+                  DatePicker.showPicker(context,
                       showTitleActions: true,
                       onChanged: (date) {
                         Fluttertoast.showToast(
@@ -200,7 +201,9 @@ class TimePickerDemo extends StatelessWidget {
                             textColor: Colors.white,
                             fontSize: 16.0);
                       }, 
-                      currentTime: DateTime.now(),
+                      pickerModel: CustomPicker(
+                        currentTime: DateTime.now()
+                      ),
                       locale: LocaleType.jp
                   );
                 },

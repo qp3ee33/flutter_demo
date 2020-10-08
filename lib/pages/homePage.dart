@@ -58,6 +58,12 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pushNamed('/datetimePicker');
             }),
+            ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('pullRefresh插件'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/pullRefresh');
+            }),
           ],
         ),
       ),
